@@ -171,6 +171,11 @@ def get_readable_time(seconds):
 
 verifydb = VerifyDB()
 
+    '''
+Note ⚠️: Add This Code In Root Of Your Repo Or Anywhere You Want.
+Credit : @GK-BOTZ
+'''
+
 async def web_server():
     web_app = web.Application(client_max_size=30000000)
     web_app.add_routes(routes)
