@@ -19,7 +19,7 @@ async def start_command(client: Client, message: Message):
     if hasattr(message, 'command') and len(message.command) == 2: 
        data = message.command[1]
        if data.split("-")[0] == 'verify':
-           await validate_token(bot, message, data)
+           await validate_token(Client, message, data)
            return
     id = message.from_user.id
     if not await present_user(id):
