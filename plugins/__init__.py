@@ -60,7 +60,7 @@ async def token_system_filter(_, __, message):
         return False
     return True 
     
-@Client.on_message((filters.private|filters.group) & filters.incoming & filters.create(token_system_filter) & ~filters.bot)
+@Client.on_message((filters.private) & filters.incoming & filters.create(token_system_filter) & ~filters.bot)
 async def global_verify_function(client, message):
     if message.text:
         cmd = message.text.split()
