@@ -13,6 +13,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from cloudscraper import create_scraper
 from motor.motor_asyncio import AsyncIOMotorClient
 
+from config import DB_URI as DATABASE_URL
 
 verify_dict = {}
 
@@ -22,7 +23,7 @@ SHORTLINK_SITE = os.environ.get('SHORTLINK_SITE', 'pocolinks.com') # YOUR SHORTL
 SHORTLINK_API = os.environ.get('SHORTLINK_API', '1dc6da47d0a983933d54b24bf640e00efea15dd6') # YOUR SHORTLINK API LIKE:- ma82owowjd9hw6_js7
 VERIFY_EXPIRE = os.environ.get('VERIFY_EXPIRE', 300) # VERIFY EXPIRE TIME IN SECONDS. LIKE:- 0 (ZERO) TO OFF VERIFICATION 
 VERIFY_TUTORIAL = os.environ.get('VERIFY_TUTORIAL', 'https://t.me/sk_entertains') # LINK OF TUTORIAL TO VERIFY 
-DATABASE_URL = os.environ.get('DATABASE_URL', 'mongodb+srv://enobot12345:4wEyfM0FvZxNhAKi@cluster0.a4rj3dj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0') # MONGODB DATABASE URL To Store Verifications 
+#DATABASE_URL = os.environ.get('DATABASE_URL', 'mongodb+srv://enobot12345:4wEyfM0FvZxNhAKi@cluster0.a4rj3dj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0') # MONGODB DATABASE URL To Store Verifications 
 COLLECTION_NAME = os.environ.get('COLLECTION_NAME', 'short')   # Collection Name For MongoDB 
 PREMIUM_USERS = list(map(int, os.environ.get('PREMIUM_USERS', '7592041488').split()))
 
