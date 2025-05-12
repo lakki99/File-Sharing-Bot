@@ -165,10 +165,10 @@ def get_readable_time(seconds):
 
 verifydb = VerifyDB()
  
-    '''
+    """
 Note ⚠️: Add This Code In Root Of Your Repo Or Anywhere You Want.
 Credit : @GK-BOTZ
-'''
+"""
 
 
 
