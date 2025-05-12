@@ -170,7 +170,7 @@ REPLY_ERROR = """<code>Use this command as a replay to any telegram message with
 @Bot.on_message(filters.command('start') & filters.private)
 async def not_joined(client: Client, message: Message):
     if not await is_user_verified(message.from_user.id):
-        await send_verification(bot, message)
+        await send_verification(Client, message)
         return
 
     if bool(JOIN_REQUEST_ENABLE):
