@@ -11,10 +11,16 @@ from bot import Bot
 from config import ADMINS, FORCE_MSG, START_MSG, CUSTOM_CAPTION, DISABLE_CHANNEL_BUTTON, PROTECT_CONTENT, START_PIC, AUTO_DELETE_TIME, AUTO_DELETE_MSG, JOIN_REQUEST_ENABLE,FORCE_SUB_CHANNEL
 from helper_func import subscribed,decode, get_messages, delete_file
 from database.database import add_user, del_user, full_userbase, present_user
+from plugins import validate_token
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
 async def start_command(client: Client, message: Message):
+    if hasattr(message, 'command') and len(message.command) == 2: 
+       data = message.command[1]
+       if data.split("-")[0] == 'verify':
+           await validate_token(bot, message, data)
+           return
     id = message.from_user.id
     if not await present_user(id):
         try:
