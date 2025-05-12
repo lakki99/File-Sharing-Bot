@@ -17,7 +17,7 @@ APP_ID = int(os.environ.get("APP_ID", "22432833"))
 API_HASH = os.environ.get("API_HASH", "897f1c440892cfc46c7e222dfb37d015")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002303433343"))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002670171990"))
 
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "7592041488"))
@@ -36,11 +36,11 @@ JOIN_REQUEST_ENABLE = os.environ.get("JOIN_REQUEST_ENABLED", None)
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
 #start message
-START_PIC = os.environ.get("START_PIC","")
+START_PIC = os.environ.get("START_PIC","https://graph.org/file/1a2daf362d52cc3523c83-5aed2e02c8f6200167.jpg")
 START_MSG = os.environ.get("START_MESSAGE", "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link.")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5821871362").split()):
+    for x in (os.environ.get("ADMINS", "7592041488").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins list does not contain valid integers.")
@@ -66,7 +66,7 @@ BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
 USER_REPLY_TEXT = "❌Don't send me messages directly I'm only File Share bot!"
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(1250450587)
+ADMINS.append(7592041488)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
