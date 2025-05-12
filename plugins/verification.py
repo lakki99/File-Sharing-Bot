@@ -166,6 +166,6 @@ verifydb = VerifyDB()
 
 
     '''
-This is a multiline string.
-Properly aligned with no unexpected indentation.
+This is a multi-line string
+with proper indentation.
 '''
